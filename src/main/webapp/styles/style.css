@@ -1,0 +1,7 @@
+.mainMenu {
+    list-style-type: none;
+}
+
+.mainMenu li {
+    display: inline-block;
+}
