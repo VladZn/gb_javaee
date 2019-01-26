@@ -10,12 +10,11 @@
 
 </h:head>
 <h:body>
-
-    <h:outputLabel value="Catalog"/>
+    <h:outputLabel value="Catalog" style="font-size: large"/>
     <h:form>
-        <p:dataTable var="product" value="#{catalogController.products}"
-                     style="margin-bottom: 20px; border-collapse: collapse; border: 1px solid">
-            <p:column headerText="Name" filterBy="name">
+        <p:dataTable var="product" value="#{catalogController.products}">
+                     <!--style="border-collapse: collapse; border: 1px solid">-->
+            <p:column headerText="Name" sortBy="#{product.name}">
                 <h:outputText value="#{product.name}"/>
             </p:column>
             <p:column headerText="Barcode">
@@ -40,7 +39,6 @@
             <p:spacer width="30"/>
             <p:commandButton value="REFRESH" update="@form"/>
         </p:outputPanel>
-        <!--<p:button value="Main" outcome=""/>-->
     </h:form>
 </h:body>
 </html>
